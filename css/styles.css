@@ -20,7 +20,7 @@ header{
 }
 
 header img{
-    max-width: 150px;
+    max-width: 100px;
     border-radius: 50%;
     margin: 10px;
 
@@ -29,6 +29,7 @@ header img{
 header h1{
     margin-top:0;
     text-align: center;
+    font-size: 1em;
 }
 
 .wrap{
@@ -44,6 +45,10 @@ header h1{
     padding:30px;
     margin-bottom: 20px;
     position: relative;
+}
+
+.box > div{
+    padding:7px;
 }
 
 .box.step:after{
@@ -65,7 +70,18 @@ header h1{
 .box.meditation{
     padding:0px;
     border: 1px solid #3659a2;
+    text-align: left;
 }
+
+.meditation>div:first-of-type h3~p:first-of-type::first-letter{
+color: #903;
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;
+} 
 
 .meditation h2{
     background-color:#3659a2;
@@ -74,22 +90,6 @@ header h1{
     border-radius: 4px 4px 0 0;
     margin-top:0;
 }
-
-.meditation p{
-    padding:15px;
-}
-
-
-
-
-
-/* .meditation{
-    border-radius: 12px;
-    text-align: left;
-    padding: 15px;
-    display:flex;
-    flex-direction: column;
-} */
 
 .button {
     height: 40px;
@@ -132,6 +132,14 @@ header h1{
             width:50%;
         }
 
+        header h1{
+            font-size: 2em;
+        }
+
+        .box > div{
+            padding:15px;
+        }
+
         .steps{
             display:flex;
         }
@@ -147,5 +155,10 @@ header h1{
         header{
             min-height: 30vh;
             flex-direction: column;
+        }
+
+        .box.meditation{
+            width:70%;
+            margin:0 auto;
         }
     }
